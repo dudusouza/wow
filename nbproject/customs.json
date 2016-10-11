@@ -1,0 +1,8 @@
+{
+    "elements": {
+        "adm": {}
+    },
+    "attributes": {
+        "type":["structure","lorem","structure"]
+    }
+} 

@@ -1,0 +1,18 @@
+RewriteEngine On
+
+RewriteRule protected index.php
+RewriteRule vendor index.php
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule .* index.php
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+<ifmodule mod_deflate.c>
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|html|php|txt|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+</ifmodule>

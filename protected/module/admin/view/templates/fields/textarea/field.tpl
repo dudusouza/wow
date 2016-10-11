@@ -1,0 +1,1 @@
+<textarea name="{$name}" maxlength="{$max}" class="form-control">{if $val!=null}{$val}{/if}</textarea>

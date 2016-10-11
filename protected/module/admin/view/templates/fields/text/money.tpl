@@ -1,0 +1,1 @@
+<input type="text" name="{$name}" {if $val!=null}value='{$val}'{/if} class='form-control money' />

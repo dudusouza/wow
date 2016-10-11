@@ -1,0 +1,1 @@
+<input type="password" name="{$name}" maxlength="{$max}" {if $val!=null}value='{$val}'{/if} class='form-control' />

@@ -1,0 +1,61 @@
+<?php
+
+namespace Model;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TblAdminUsuario
+ *
+ * @ORM\Table(name="tbl_admin_usuario", indexes={@ORM\Index(name="usuario", columns={"usuario"})})
+ * @ORM\Entity
+ */
+class TblAdminUsuario
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="usuario_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $usuarioId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nome", type="string", length=128, nullable=true)
+     */
+    private $nome;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=128, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usuario", type="string", length=32, nullable=true)
+     */
+    private $usuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="senha", type="string", length=128, nullable=true)
+     */
+    private $senha;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="level", type="boolean", nullable=true)
+     */
+    private $level;
+
+
+}
+
